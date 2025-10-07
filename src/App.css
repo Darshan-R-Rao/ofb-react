@@ -1,0 +1,262 @@
+/* --- Global & Layout --- */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.app-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-right: 1px solid #e7e7e7;
+    box-sizing: border-box;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 2rem 4rem;
+    max-width: 1200px;
+    margin-left: 250px; /* IMPORTANT: This should match the sidebar width */
+}
+
+/* --- Headers --- */
+.main-header, .page-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.section-header {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+h3 {
+    color: #34495e;
+}
+
+/* --- Reusable Components --- */
+.section {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.05);
+}
+
+.info-box, .success-box {
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.info-box {
+    background-color: #e7f3fe;
+    border-left: 5px solid #007bff;
+    color: #0c5464;
+}
+
+.success-box {
+    background-color: #d4edda;
+    border-left: 5px solid #28a745;
+    color: #155724;
+}
+
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2rem 0;
+}
+
+/* --- Sidebar Styles --- */
+.sidebar h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.sidebar a {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    padding: 0.75rem;
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #e9ecef;
+    color: #000;
+}
+
+.sidebar a.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* --- Introduction Page --- */
+.feature-card {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.feature-desc {
+    color: #555;
+}
+
+/* --- Simulation Page --- */
+.simulation-container button, .simulation-container select {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    transition: background-color 0.2s;
+     color: #000;
+}
+
+.simulation-container button:hover, .simulation-container select:hover {
+    background-color: #e9ecef;
+}
+
+.simulation-container button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.simulation-container textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.tab-buttons {
+    display: flex;
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 1.5rem;
+}
+
+.tab-buttons button {
+    border: none;
+    background-color: transparent;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+}
+
+.tab-buttons button.active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.crypto-params {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.crypto-params code {
+    display: block;
+    background-color: #e9ecef;
+    padding: 0.75rem;
+    border-radius: 5px;
+    word-break: break-all;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Conclusion Page --- */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.styled-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
