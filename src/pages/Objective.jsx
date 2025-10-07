@@ -32,7 +32,6 @@ function Objective() {
           <li>Understanding modern cryptographic protocols</li>
           <li>Foundation for advanced cryptographic studies</li>
         </ul>
-        <p>This project bridges theoretical cryptography concepts with practical implementation.</p>
       </div>
     </div>
   );
